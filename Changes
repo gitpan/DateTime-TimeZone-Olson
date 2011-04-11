@@ -1,3 +1,12 @@
+version 0.001; 2011-04-11
+
+  * bugfix: require bugfixed version of DateTime::TimeZone::Tzfile
+    (for reading tzfiles in binary mode)
+
+  * include META.json in distribution
+
+  * add MYMETA.json to .cvsignore
+
 version 0.000; 2010-08-31
 
   * initial released version

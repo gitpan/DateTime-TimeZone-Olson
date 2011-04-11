@@ -40,7 +40,7 @@ package DateTime::TimeZone::Olson;
 use warnings;
 use strict;
 
-use DateTime::TimeZone::Tzfile 0.004 ();
+use DateTime::TimeZone::Tzfile 0.005 ();
 use Time::OlsonTZ::Data 0.201012 qw(
 	olson_version
 	olson_canonical_names olson_link_names olson_all_names
@@ -49,7 +49,7 @@ use Time::OlsonTZ::Data 0.201012 qw(
 	olson_tzfile
 );
 
-our $VERSION = "0.000";
+our $VERSION = "0.001";
 
 use parent "Exporter";
 our @EXPORT_OK = qw(
@@ -164,7 +164,7 @@ Andrew Main (Zefram) <zefram@fysh.org>
 
 =head1 COPYRIGHT
 
-Copyright (C) 2010 Andrew Main (Zefram) <zefram@fysh.org>
+Copyright (C) 2010, 2011 Andrew Main (Zefram) <zefram@fysh.org>
 
 =head1 LICENSE
 

@@ -6,7 +6,6 @@ use Module::Build;
 
 Module::Build->new(
 	module_name => "DateTime::TimeZone::Olson",
-	dist_version => "0.000",
 	license => "perl",
 	configure_requires => {
 		"Module::Build" => 0,
@@ -22,7 +21,7 @@ Module::Build->new(
 		"warnings" => 0,
 	},
 	requires => {
-		"DateTime::TimeZone::Tzfile" => "0.004",
+		"DateTime::TimeZone::Tzfile" => "0.005",
 		"Time::OlsonTZ::Data" => "0.201012",
 		"perl" => "5.006",
 		"strict" => 0,
