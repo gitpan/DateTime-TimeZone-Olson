@@ -40,7 +40,7 @@ package DateTime::TimeZone::Olson;
 use warnings;
 use strict;
 
-use DateTime::TimeZone::Tzfile 0.005 ();
+use DateTime::TimeZone::Tzfile 0.006 ();
 use Time::OlsonTZ::Data 0.201012 qw(
 	olson_version
 	olson_canonical_names olson_link_names olson_all_names
@@ -49,7 +49,7 @@ use Time::OlsonTZ::Data 0.201012 qw(
 	olson_tzfile
 );
 
-our $VERSION = "0.001";
+our $VERSION = "0.002";
 
 use parent "Exporter";
 our @EXPORT_OK = qw(
@@ -138,7 +138,7 @@ sub olson_tz($) {
 	return $cache_tz{$tzname} ||= DateTime::TimeZone::Tzfile->new(
 		filename => olson_tzfile($tzname),
 		name => $tzname,
-		category => ($tzname =~ m#\A([^/]+)/# ? $1 : undef),
+		category => ($tzname =~ m#\A([^/]+)/# ? "$1" : undef),
 		is_olson => 1,
 	);
 }

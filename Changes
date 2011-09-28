@@ -1,3 +1,11 @@
+version 0.002; 2011-09-28
+
+  * avoid latent bug of passing magic variables $1 et al into functions
+    where in the future they might unexpectedly change value
+
+  * require new version of DateTime::TimeZone::Tzfile which provides
+    better error messages
+
 version 0.001; 2011-04-11
 
   * bugfix: require bugfixed version of DateTime::TimeZone::Tzfile

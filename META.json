@@ -4,7 +4,7 @@
       "Andrew Main (Zefram) <zefram@fysh.org>"
    ],
    "dynamic_config" : 0,
-   "generated_by" : "Module::Build version 0.38, CPAN::Meta::Converter version 2.110580",
+   "generated_by" : "Module::Build version 0.38, CPAN::Meta::Converter version 2.112621",
    "license" : [
       "perl_5"
    ],
@@ -33,7 +33,7 @@
       },
       "runtime" : {
          "requires" : {
-            "DateTime::TimeZone::Tzfile" : "0.005",
+            "DateTime::TimeZone::Tzfile" : "0.006",
             "Time::OlsonTZ::Data" : "0.201012",
             "perl" : "5.006",
             "strict" : 0,
@@ -44,7 +44,7 @@
    "provides" : {
       "DateTime::TimeZone::Olson" : {
          "file" : "lib/DateTime/TimeZone/Olson.pm",
-         "version" : "0.001"
+         "version" : "0.002"
       }
    },
    "release_status" : "stable",
@@ -53,5 +53,5 @@
          "http://dev.perl.org/licenses/"
       ]
    },
-   "version" : "0.001"
+   "version" : "0.002"
 }

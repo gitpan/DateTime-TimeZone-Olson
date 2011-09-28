@@ -1,5 +1,5 @@
 This file contains message digests of all files listed in MANIFEST,
-signed via the Module::Signature module, version 0.66.
+signed via the Module::Signature module, version 0.68.
 
 To verify the content in this distribution, first make sure you have
 Module::Signature installed, then type:
@@ -15,14 +15,14 @@ not run its Makefile.PL or Build.PL.
 Hash: SHA1
 
 SHA1 5ee0161464e3831a50336b351d44dee34bc9d887 .cvsignore
-SHA1 c00db8dce098bc1a3a109735d7c06a3813ffab1b Build.PL
-SHA1 6070925442c9b1722103489f51b215d8884c9915 Changes
+SHA1 7bd10a536e404e0c43be5f6410e7f11bcef44d5c Build.PL
+SHA1 b913854564394b08b4337c2d641a752117c19f56 Changes
 SHA1 e91cc0cd68fdbd31970e1b45004ca7f36aada286 MANIFEST
-SHA1 f441d4a2d67e02165ef80c7d5f4a2dceed7bc340 META.json
-SHA1 c5531cb7843e7ca50a2fa487c6465d3995495edb META.yml
+SHA1 f0c4ef4d60e9c676da150467c604f84c126b324a META.json
+SHA1 39fb8001abfb21aad3a68317e27393bb050bc213 META.yml
 SHA1 a4df8e97ccd390a42212af5a9f4d0986c85e7a5f Makefile.PL
 SHA1 fda909f7f620ae969bc045c3bdc6cd3d3f531230 README
-SHA1 385abf17e3a9008fe899ccbb20f8a9ccff322b84 lib/DateTime/TimeZone/Olson.pm
+SHA1 10a292b783909b3c70061de6423bbb7cfd8bae8f lib/DateTime/TimeZone/Olson.pm
 SHA1 96523e4d2bb49e6da74f01f8376eaf68be05f127 t/metadata.t
 SHA1 904d9a4f76525e2303e4b0c168c68230f223c8de t/pod_cvg.t
 SHA1 65c75abdef6f01a5d1588a307f2ddfe2333dc961 t/pod_syn.t
@@ -30,7 +30,7 @@ SHA1 7b4f45247a49678fd17e54c43e13c654275e5a33 t/tz.t
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.10 (GNU/Linux)
 
-iEYEARECAAYFAk2jQ/YACgkQOV9mt2VyAVGH/QCfSFdo/g6HbUPTCLAk9V2Ytsom
-UFcAnjuezg3dgOKX56Krb5ms6PYwFvKt
-=1w+g
+iEYEARECAAYFAk6DgEYACgkQOV9mt2VyAVGVrACfXrfOmRMHstEYsZViQutIMq2i
+QAoAoINpMyrGe25D2TSFOq3pISmf5vMR
+=0NQd
 -----END PGP SIGNATURE-----
