@@ -1,3 +1,21 @@
+version 0.003; 2012-03-11
+
+  * bugfix: require bugfixed version of DateTime::TimeZone::Tzfile
+    which recognises zone disuse indicator if it comes in the form of
+    the POSIX-TZ extension rule
+
+  * require new version of DateTime::TimeZone::Tzfile which distinguishes
+    between zone disuse and missing data in its error messages
+
+  * in documentation, explicitly describe olson_country_selection()
+    rather than referring to Time::OlsonTZ::Data
+
+  * load DateTime::TimeZone::Tzfile lazily
+
+  * in META.{yml,json}, point to public git repository
+
+  * convert .cvsignore to .gitignore
+
 version 0.002; 2011-09-28
 
   * avoid latent bug of passing magic variables $1 et al into functions

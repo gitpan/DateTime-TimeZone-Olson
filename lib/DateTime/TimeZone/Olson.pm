@@ -40,7 +40,6 @@ package DateTime::TimeZone::Olson;
 use warnings;
 use strict;
 
-use DateTime::TimeZone::Tzfile 0.006 ();
 use Time::OlsonTZ::Data 0.201012 qw(
 	olson_version
 	olson_canonical_names olson_link_names olson_all_names
@@ -49,7 +48,7 @@ use Time::OlsonTZ::Data 0.201012 qw(
 	olson_tzfile
 );
 
-our $VERSION = "0.002";
+our $VERSION = "0.003";
 
 use parent "Exporter";
 our @EXPORT_OK = qw(
@@ -113,8 +112,69 @@ be found in the L</olson_canonical_names> hash.
 =item olson_country_selection
 
 Returns information about how timezones relate to countries, intended
-to aid humans in selecting a geographical timezone.  For details of the
-data format see L<Time::OlsonTZ::Data/olson_country_selection>.
+to aid humans in selecting a geographical timezone.
+
+The return value is a reference to a hash, keyed by (ISO 3166 alpha-2
+uppercase) country code.  The value for each country is a hash containing
+these values:
+
+=over
+
+=item B<alpha2_code>
+
+The ISO 3166 alpha-2 uppercase country code.
+
+=item B<olson_name>
+
+An English name for the country, possibly in a modified form, optimised
+to help humans find the right entry in alphabetical lists.  This is
+not necessarily identical to the country's standard short or long name.
+(For other forms of the name, consult a database of countries, keying
+by the country code.)
+
+=item B<regions>
+
+Information about the regions of the country that use distinct
+timezones.  This is a hash, keyed by English description of the region.
+The description is empty if there is only one region.  The value for
+each region is a hash containing these values:
+
+=over
+
+=item B<olson_description>
+
+Brief English description of the region, used to distinguish between
+the regions of a single country.  Empty string if the country has only
+one region for timezone purposes.  (This is the same string used as the
+key in the B<regions> hash.)
+
+=item B<timezone_name>
+
+Name of the Olson timezone used in this region.  The named timezone is
+guaranteed to exist in the database, but not necessarily as a canonical
+name (it may be a link).  Typically, where there are aliases or identical
+canonical zones, a name is chosen that refers to a location in the
+country of interest.
+
+=item B<location_coords>
+
+Geographical coordinates of some point within the location referred to in
+the timezone name.  This is a latitude and longitude, in ISO 6709 format.
+
+=back
+
+=back
+
+This data structure is intended to help a human select the appropriate
+timezone based on political geography, specifically working from a
+selection of country.  It is of essentially no use for any other purpose.
+It is not strictly guaranteed that every geographical timezone in the
+database is listed somewhere in this structure, so it is of limited use
+in providing information about an already-selected timezone.  It does
+not include non-geographic timezones at all.  It also does not claim
+to be a comprehensive list of countries, and does not make any claims
+regarding the political status of any entity listed: the "country"
+classification is loose, and used only for identification purposes.
 
 =back
 
@@ -135,12 +195,16 @@ L<DateTime::TimeZone::Tzfile>, but this is not guaranteed.
 my %cache_tz;
 sub olson_tz($) {
 	my($tzname) = @_;
-	return $cache_tz{$tzname} ||= DateTime::TimeZone::Tzfile->new(
-		filename => olson_tzfile($tzname),
-		name => $tzname,
-		category => ($tzname =~ m#\A([^/]+)/# ? "$1" : undef),
-		is_olson => 1,
-	);
+	return $cache_tz{$tzname} ||= do {
+		require DateTime::TimeZone::Tzfile;
+		DateTime::TimeZone::Tzfile->VERSION(0.007);
+		DateTime::TimeZone::Tzfile->new(
+			filename => olson_tzfile($tzname),
+			name => $tzname,
+			category => ($tzname =~ m#\A([^/]+)/# ? "$1" : undef),
+			is_olson => 1,
+		);
+	};
 }
 
 =back
@@ -164,7 +228,7 @@ Andrew Main (Zefram) <zefram@fysh.org>
 
 =head1 COPYRIGHT
 
-Copyright (C) 2010, 2011 Andrew Main (Zefram) <zefram@fysh.org>
+Copyright (C) 2010, 2011, 2012 Andrew Main (Zefram) <zefram@fysh.org>
 
 =head1 LICENSE
 

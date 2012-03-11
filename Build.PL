@@ -21,7 +21,7 @@ Module::Build->new(
 		"warnings" => 0,
 	},
 	requires => {
-		"DateTime::TimeZone::Tzfile" => "0.006",
+		"DateTime::TimeZone::Tzfile" => "0.007",
 		"Time::OlsonTZ::Data" => "0.201012",
 		"perl" => "5.006",
 		"strict" => 0,
@@ -29,6 +29,12 @@ Module::Build->new(
 	},
 	dynamic_config => 0,
 	meta_add => { distribution_type => "module" },
+	meta_merge => {
+		resources => {
+			repository => "git://lake.fysh.org/zefram/".
+				"DateTime-TimeZone-Olson.git",
+		},
+	},
 	create_makefile_pl => "passthrough",
 	sign => 1,
 )->create_build_script;
