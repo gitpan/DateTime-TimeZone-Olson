@@ -1,5 +1,5 @@
 This file contains message digests of all files listed in MANIFEST,
-signed via the Module::Signature module, version 0.68.
+signed via the Module::Signature module, version 0.70.
 
 To verify the content in this distribution, first make sure you have
 Module::Signature installed, then type:
@@ -15,22 +15,22 @@ not run its Makefile.PL or Build.PL.
 Hash: SHA1
 
 SHA1 3002e4587b8a848666d17414993ad0a57fc19702 .gitignore
-SHA1 ef118a9942abb9208884c8758952f25e775a588e Build.PL
-SHA1 9eb4f2c5c8a0f5ed3d760def65b0549e6b1bcb2b Changes
+SHA1 238eae587ab9de167057ce47523d7234646c668c Build.PL
+SHA1 dbe4766f33f63a3520ad88db452d93990148ea85 Changes
 SHA1 1f4a299b267d0234f2789dbad3d58dcb3356c944 MANIFEST
-SHA1 41889d8c20a7d4aa1d9438386ee1afb13dbb04b3 META.json
-SHA1 75fca86070fc6c6c784483fa6b00bb692e8f1e48 META.yml
-SHA1 a249be72fc0b310375871d710790dd94e08a12f0 Makefile.PL
-SHA1 e5a223b0c1bd3a542a061cb35ddd0712f65c9f89 README
-SHA1 f820a770c0c059909806a45036d32d29bd541e74 lib/DateTime/TimeZone/Olson.pm
+SHA1 4b35cd1921ec790061d82a638b198f6b9ba432bc META.json
+SHA1 83936442b62ce2fa44d0957528ce6dfedb06fd2d META.yml
+SHA1 d644f6f709bd3f1269c64f491a7a34a0b7fad19f Makefile.PL
+SHA1 cb3ad7e0e8056daa83089faa80bb204e6e361094 README
+SHA1 f2f76406791b8de7a9d967f25ce93559e01cb52b lib/DateTime/TimeZone/Olson.pm
 SHA1 96523e4d2bb49e6da74f01f8376eaf68be05f127 t/metadata.t
 SHA1 904d9a4f76525e2303e4b0c168c68230f223c8de t/pod_cvg.t
 SHA1 65c75abdef6f01a5d1588a307f2ddfe2333dc961 t/pod_syn.t
 SHA1 7b4f45247a49678fd17e54c43e13c654275e5a33 t/tz.t
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.10 (GNU/Linux)
+Version: GnuPG v1.4.12 (GNU/Linux)
 
-iEYEARECAAYFAk9cjrsACgkQOV9mt2VyAVHRPgCeKR3MFavkwSXnx7kClIW7dah+
-uqcAoIr+0hiD5E10nS//fg9E5IaU8SvI
-=ygb5
+iEYEARECAAYFAlHjGyMACgkQOV9mt2VyAVHsPwCbBK4243DVnbAaPTfzUTS24Cc7
+ddkAn1yfEZsrGZEyf2NnPagxleRkktm1
+=IW6c
 -----END PGP SIGNATURE-----

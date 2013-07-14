@@ -4,7 +4,7 @@
       "Andrew Main (Zefram) <zefram@fysh.org>"
    ],
    "dynamic_config" : 0,
-   "generated_by" : "Module::Build version 0.4, CPAN::Meta::Converter version 2.112621",
+   "generated_by" : "Module::Build version 0.4003, CPAN::Meta::Converter version 2.120921",
    "license" : [
       "perl_5"
    ],
@@ -16,35 +16,35 @@
    "prereqs" : {
       "build" : {
          "requires" : {
-            "Module::Build" : 0,
-            "Test::More" : 0,
+            "Module::Build" : "0",
+            "Test::More" : "0",
             "perl" : "5.006",
-            "strict" : 0,
-            "warnings" : 0
+            "strict" : "0",
+            "warnings" : "0"
          }
       },
       "configure" : {
          "requires" : {
-            "Module::Build" : 0,
+            "Module::Build" : "0",
             "perl" : "5.006",
-            "strict" : 0,
-            "warnings" : 0
+            "strict" : "0",
+            "warnings" : "0"
          }
       },
       "runtime" : {
          "requires" : {
-            "DateTime::TimeZone::Tzfile" : "0.007",
+            "DateTime::TimeZone::Tzfile" : "0.008",
             "Time::OlsonTZ::Data" : "0.201012",
             "perl" : "5.006",
-            "strict" : 0,
-            "warnings" : 0
+            "strict" : "0",
+            "warnings" : "0"
          }
       }
    },
    "provides" : {
       "DateTime::TimeZone::Olson" : {
          "file" : "lib/DateTime/TimeZone/Olson.pm",
-         "version" : "0.003"
+         "version" : "0.004"
       }
    },
    "release_status" : "stable",
@@ -53,8 +53,8 @@
          "http://dev.perl.org/licenses/"
       ],
       "repository" : {
-         "url" : "git://lake.fysh.org/zefram/DateTime-TimeZone-Olson.git"
+         "url" : "git://git.fysh.org/zefram/DateTime-TimeZone-Olson.git"
       }
    },
-   "version" : "0.003"
+   "version" : "0.004"
 }
