@@ -23,9 +23,9 @@ name: DateTime-TimeZone-Olson
 provides:
   DateTime::TimeZone::Olson:
     file: lib/DateTime/TimeZone/Olson.pm
-    version: 0.005
+    version: 0.006
 requires:
-  DateTime::TimeZone::Tzfile: 0.009
+  DateTime::TimeZone::Tzfile: 0.010
   Time::OlsonTZ::Data: 0.201012
   perl: 5.006
   strict: 0
@@ -33,4 +33,4 @@ requires:
 resources:
   license: http://dev.perl.org/licenses/
   repository: git://git.fysh.org/zefram/DateTime-TimeZone-Olson.git
-version: 0.005
+version: 0.006
