@@ -4,7 +4,7 @@
       "Andrew Main (Zefram) <zefram@fysh.org>"
    ],
    "dynamic_config" : 0,
-   "generated_by" : "Module::Build version 0.4003, CPAN::Meta::Converter version 2.120921",
+   "generated_by" : "Module::Build version 0.4007, CPAN::Meta::Converter version 2.131560",
    "license" : [
       "perl_5"
    ],
@@ -33,7 +33,7 @@
       },
       "runtime" : {
          "requires" : {
-            "DateTime::TimeZone::Tzfile" : "0.008",
+            "DateTime::TimeZone::Tzfile" : "0.009",
             "Time::OlsonTZ::Data" : "0.201012",
             "perl" : "5.006",
             "strict" : "0",
@@ -44,7 +44,7 @@
    "provides" : {
       "DateTime::TimeZone::Olson" : {
          "file" : "lib/DateTime/TimeZone/Olson.pm",
-         "version" : "0.004"
+         "version" : "0.005"
       }
    },
    "release_status" : "stable",
@@ -56,5 +56,5 @@
          "url" : "git://git.fysh.org/zefram/DateTime-TimeZone-Olson.git"
       }
    },
-   "version" : "0.004"
+   "version" : "0.005"
 }

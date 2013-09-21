@@ -48,7 +48,7 @@ use Time::OlsonTZ::Data 0.201012 qw(
 	olson_tzfile
 );
 
-our $VERSION = "0.004";
+our $VERSION = "0.005";
 
 use parent "Exporter";
 our @EXPORT_OK = qw(
@@ -197,7 +197,7 @@ sub olson_tz($) {
 	my($tzname) = @_;
 	return $cache_tz{$tzname} ||= do {
 		require DateTime::TimeZone::Tzfile;
-		DateTime::TimeZone::Tzfile->VERSION(0.008);
+		DateTime::TimeZone::Tzfile->VERSION(0.009);
 		DateTime::TimeZone::Tzfile->new(
 			filename => olson_tzfile($tzname),
 			name => $tzname,

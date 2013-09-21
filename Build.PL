@@ -21,7 +21,7 @@ Module::Build->new(
 		"warnings" => 0,
 	},
 	requires => {
-		"DateTime::TimeZone::Tzfile" => "0.008",
+		"DateTime::TimeZone::Tzfile" => "0.009",
 		"Time::OlsonTZ::Data" => "0.201012",
 		"perl" => "5.006",
 		"strict" => 0,

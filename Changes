@@ -1,3 +1,8 @@
+version 0.005; 2013-09-21
+
+  * require newer version of DateTime::TimeZone::Tzfile to support
+    version-3 tzfiles
+
 version 0.004; 2013-07-14
 
   * bugfix: require bugfixed version of DateTime::TimeZone::Tzfile

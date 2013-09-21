@@ -14,7 +14,7 @@ configure_requires:
   strict: 0
   warnings: 0
 dynamic_config: 0
-generated_by: 'Module::Build version 0.4003, CPAN::Meta::Converter version 2.120921'
+generated_by: 'Module::Build version 0.4007, CPAN::Meta::Converter version 2.131560'
 license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
@@ -23,9 +23,9 @@ name: DateTime-TimeZone-Olson
 provides:
   DateTime::TimeZone::Olson:
     file: lib/DateTime/TimeZone/Olson.pm
-    version: 0.004
+    version: 0.005
 requires:
-  DateTime::TimeZone::Tzfile: 0.008
+  DateTime::TimeZone::Tzfile: 0.009
   Time::OlsonTZ::Data: 0.201012
   perl: 5.006
   strict: 0
@@ -33,4 +33,4 @@ requires:
 resources:
   license: http://dev.perl.org/licenses/
   repository: git://git.fysh.org/zefram/DateTime-TimeZone-Olson.git
-version: 0.004
+version: 0.005
